@@ -1,12 +1,12 @@
-package Ejercicio17;
+package Ejercicio18;
 
 public class Elemento {
     private String nombre;
-    private float precio;
+    private double precio;
     private int cantidad;
 
 
-    public Elemento(String nombre, float precio, int cantidad){
+    public Elemento(String nombre, double precio, int cantidad){
         this.nombre=nombre;
         this.precio=precio;
         this.cantidad=cantidad;
@@ -20,7 +20,7 @@ public class Elemento {
         return nombre;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -41,10 +41,11 @@ public class Elemento {
     public String toString() {
         
         String resultado="";
+        String cantidad=String.format("%.2f",this.precio*this.cantidad );
 
-        resultado+=this.nombre+" PVP: "+this.precio+" Unidades: "+this.cantidad+" Subtotal: "+this.precio*this.cantidad;
+        resultado+=this.nombre+" PVP: "+this.precio+" Unidades: "+this.cantidad+" Subtotal: "+cantidad;
 
-        return super.toString();
+        return resultado;
     }
 
 
